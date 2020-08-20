@@ -11,7 +11,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("Client/build"));
 }
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
