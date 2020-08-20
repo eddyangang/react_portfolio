@@ -18,7 +18,6 @@ app.use((req, res, next) => {
 });
 
 app.get("*", (req, res) => {
-  console.log(_dirname);
   res.sendFile(path.join(__dirname, "./Client/public/index.html"));
 });
 
