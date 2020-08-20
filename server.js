@@ -18,11 +18,11 @@ app.use((req, res, next) => {
   next();
 });
 
+require("./route/api-route.js")(app);
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./Client/public/index.html"));
 });
-
-require("./route/api-route.js")(app);
 
 db.sequelize.sync({
   force: false

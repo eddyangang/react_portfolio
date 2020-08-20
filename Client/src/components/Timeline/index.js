@@ -3,6 +3,7 @@ import Spinner from 'react-bootstrap/Spinner'
 import TimelineItems from "../timelineItems/index"
 import API from "../../utils/API"
 export default function Timeline() {
+    
     const [Projects, setProjects] = useState([]);
 
     useEffect(() => {
