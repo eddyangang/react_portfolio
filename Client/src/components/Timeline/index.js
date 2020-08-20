@@ -12,8 +12,11 @@ export default function Timeline() {
     function loadProjects() {
         API.getProjects()
         .then(data => {
+            console.log(data);
             if (!data) console.log("no data return");
-            setProjects(data.data)
+            else{
+                setProjects(data.data)
+            }
         })
         .catch(err => console.log(err));
     }
