@@ -10,16 +10,16 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(express.json());
-app.use(express.static("./client/public"));
+app.use(express.static("./Client/public"));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   console.log(_dirname);
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+  res.sendFile(path.join(__dirname, "./Client/public/index.html"));
 });
 
 require("./route/api-route.js")(app);
